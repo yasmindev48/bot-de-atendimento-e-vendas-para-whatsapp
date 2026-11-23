@@ -5,7 +5,7 @@
     "saudacao": "Olá! Sou a Lía, atendente da Loja Exemplo 😊 Tudo bem?",
     "pedir_nome": "Como posso te chamar?",
     "resposta_tudo_bem": "Tudo ótimo, obrigada por perguntar!",
-    "apresentar_menu": "Prazer, {nome}! Sobre o que você quer falar? Digite o número:",
+    "apresentar_menu": "Olá, {nome}! Prazer em te atender! Sobre o que você quer falar? Digite o número da opção:",
     "nao_entendi": "Desculpa, não entendi 😅 Pode digitar só o número da opção?",
     "transferindo": "Certo! Vou te passar para a equipe de {setor}. Já já alguém te responde por aqui.",
     "passar_para_humano": "Vou te passar para uma pessoa da nossa equipe, tá? Ela vai te ajudar.",
