@@ -11,8 +11,4 @@ print()
 for opcao, info in dados["menu"].items():
     print(f"{opcao}. {info['nome']}")
 
-print(dados["mensagens"]["saudacao"])
-print()
-for opcao, info in dados["menu"].items():
-    print(f"{opcao}. {info['nome']}")
 
