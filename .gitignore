@@ -4,3 +4,4 @@ dados/mye.*
 __pycache__/
 *.pyc
 .pytest_cache/
+CLAUDE.md

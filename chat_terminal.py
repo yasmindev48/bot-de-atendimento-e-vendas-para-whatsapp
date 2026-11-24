@@ -12,6 +12,8 @@ for opcao, info in dados["menu"].items():
     print(f"{opcao}. {info['nome']}")
 
 print()
+tentativas = 0
+
 while True:
     escolha = input(">")
 
@@ -24,6 +26,11 @@ while True:
         print(f"🔔 [TRANSFERIR → {setor}]")
         break
     else:
+        tentativas +=1
+        if tentativas == 2:
+            print(dados["mensagens"]["passar_para_humano"])
+            print("🔔 [TRANSFERIR → Comercial]")
+            break
         print(dados["mensagens"]["nao_entendi"])
 
 
