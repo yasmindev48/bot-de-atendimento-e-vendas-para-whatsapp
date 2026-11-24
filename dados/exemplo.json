@@ -7,25 +7,25 @@
     "resposta_tudo_bem": "Tudo ótimo, obrigada por perguntar!",
     "apresentar_menu": "Olá, {nome}! Prazer em te atender! Sobre o que você quer falar? Digite o número da opção:",
     "nao_entendi": "Desculpa, não entendi 😅 Pode digitar só o número da opção?",
-    "transferindo": "Certo! Vou te passar para a equipe de {setor}. Já já alguém te responde por aqui.",
+    "transferindo": "Certo! Vou te passar para {destino}. Já já alguém te responde por aqui.",
     "passar_para_humano": "Vou te passar para uma pessoa da nossa equipe, tá? Ela vai te ajudar.",
     "despedida": "Obrigada pelo contato, {nome}! Até mais 👋"
   },
 
-  "menu": {
-    "1": { "nome": "Meu pedido", "setor": "Pedidos" },
-    "2": { "nome": "Financeiro", "setor": "Financeiro" },
-    "3": { "nome": "Comercial", "setor": "Comercial" },
-    "4": { "nome": "Marketing", "setor": "Marketing" },
-    "5": { "nome": "Ouvidoria", "setor": "Ouvidoria" },
+    "menu": {
+    "1": { "nome": "Meu pedido", "setor": "Pedidos", "destino": "o setor de Pedidos" },
+    "2": { "nome": "Financeiro", "setor": "Financeiro", "destino": "o setor Financeiro" },
+    "3": { "nome": "Comercial", "setor": "Comercial", "destino": "o setor Comercial" },
+    "4": { "nome": "Marketing", "setor": "Marketing", "destino": "o setor de Marketing" },
+    "5": { "nome": "Ouvidoria", "setor": "Ouvidoria", "destino": "o setor de Ouvidoria" },
     "0": { "nome": "Encerrar atendimento" }
   },
 
   "comercial": {
     "pergunta": "Você tem salão de beleza ou está comprando para uso pessoal?",
     "opcoes": {
-      "1": { "nome": "Salão de beleza", "setor": "Consultor" },
-      "2": { "nome": "Comprando para mim", "setor": "Representante comercial" }
+      "1": { "nome": "Salão de beleza", "setor": "Consultor", "destino": "um dos nossos consultores" },
+      "2": { "nome": "Comprando para mim", "setor": "Representante comercial", "destino": "o nosso representante comercial" }
     }
   }
 }

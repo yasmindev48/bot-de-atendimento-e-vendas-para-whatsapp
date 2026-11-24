@@ -27,15 +27,17 @@ while True:
             print(f"{opcao}. {info['nome']}")
         resposta = input("> ")
         if resposta in dados ["comercial"][ "opcoes"]:                         
-            setor = dados["comercial"]["opcoes"][resposta]["setor"]                              
-            print(dados["mensagens"]["transferindo"].format(setor=setor))
+            setor = dados["comercial"]["opcoes"][resposta]["setor"]
+            destino = dados["comercial"]["opcoes"][resposta]["destino"]
+            print(dados["mensagens"]["transferindo"].format(destino=destino))
             print(f"🔔 [TRANSFERIR → {setor}]")
         else:
             print(dados["mensagens"]["passar_para_humano"])
             print("🔔 [TRANSFERIR → Comercial]")
         break
     elif acao == "encaminhar":
-        print(dados["mensagens"]["transferindo"].format(setor=setor))
+        destino = dados["menu"][escolha]["destino"]
+        print(dados["mensagens"]["transferindo"].format(destino=destino))
         print(f"🔔 [TRANSFERIR → {setor}]")
         break
     else:
