@@ -22,7 +22,7 @@
   },
 
   "comercial": {
-    "pergunta": "Você é de um salão de beleza ou está comprando para você?",
+    "pergunta": "Você tem salão de beleza ou está comprando para uso pessoal?",
     "opcoes": {
       "1": { "nome": "Salão de beleza", "setor": "Consultor" },
       "2": { "nome": "Comprando para mim", "setor": "Representante comercial" }
