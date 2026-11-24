@@ -1,5 +1,5 @@
-from bot.fluxo import carregar_dados, decidir_escolha
 from bot.handoff import deve_passar_para_humano
+from bot.fluxo import carregar_dados, decidir_escolha, decidir_comercial
 
 dados = carregar_dados("dados/exemplo.json")
 
@@ -26,14 +26,14 @@ while True:
         for opcao, info in dados["comercial"][ "opcoes"].items():                      
             print(f"{opcao}. {info['nome']}")
         resposta = input("> ")
-        if resposta in dados ["comercial"][ "opcoes"]:                         
-            setor = dados["comercial"]["opcoes"][resposta]["setor"]
+        acao_comercial, setor = decidir_comercial(resposta, dados)
+        if acao_comercial == "encaminhar":
             destino = dados["comercial"]["opcoes"][resposta]["destino"]
             print(dados["mensagens"]["transferindo"].format(destino=destino))
             print(f"🔔 [TRANSFERIR → {setor}]")
         else:
             print(dados["mensagens"]["passar_para_humano"])
-            print("🔔 [TRANSFERIR → Comercial]")
+            print(f"🔔 [TRANSFERIR → {setor}]")
         break
     elif acao == "encaminhar":
         destino = dados["menu"][escolha]["destino"]

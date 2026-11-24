@@ -14,3 +14,10 @@ def decidir_escolha(escolha, dados):
         setor = dados["menu"][escolha]["setor"]
         return "encaminhar", setor
     return "nao_entendi", None
+
+
+def decidir_comercial(resposta, dados):
+    opcoes = dados["comercial"]["opcoes"]
+    if resposta in opcoes:
+        return "encaminhar", opcoes[resposta]["setor"]
+    return "passar_para_humano", "Comercial"
