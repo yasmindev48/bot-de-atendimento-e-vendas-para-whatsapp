@@ -1,4 +1,4 @@
-from bot.fluxo import carregar_dados
+from bot.fluxo import carregar_dados, decidir_escolha
 
 dados = carregar_dados("dados/exemplo.json")
 
@@ -15,11 +15,12 @@ tentativas = 0
 
 while True:
     escolha = input(">")
+    acao, setor = decidir_escolha(escolha, dados)
 
-    if escolha == "0":
+    if acao == "encerrar":
         print(dados["mensagens"]["despedida"].format(nome=nome))
         break
-    elif escolha == "3":
+    elif acao == "comercial":
         print(dados["comercial"]["pergunta"])
         for opcao, info in dados["comercial"][ "opcoes"].items():                      
             print(f"{opcao}. {info['nome']}")
@@ -32,8 +33,7 @@ while True:
             print(dados["mensagens"]["passar_para_humano"])
             print("🔔 [TRANSFERIR → Comercial]")
         break
-    elif escolha in dados["menu"]:
-        setor = dados["menu"][escolha]["setor"]
+    elif acao == "encaminhar":
         print(dados["mensagens"]["transferindo"].format(setor=setor))
         print(f"🔔 [TRANSFERIR → {setor}]")
         break
