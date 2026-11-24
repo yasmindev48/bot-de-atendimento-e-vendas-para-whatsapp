@@ -1,4 +1,5 @@
 from bot.fluxo import carregar_dados, decidir_escolha
+from bot.handoff import deve_passar_para_humano
 
 dados = carregar_dados("dados/exemplo.json")
 
@@ -39,7 +40,7 @@ while True:
         break
     else:
         tentativas +=1
-        if tentativas == 2:
+        if deve_passar_para_humano(tentativas):
             print(dados["mensagens"]["passar_para_humano"])
             print("🔔 [TRANSFERIR → Comercial]")
             break
