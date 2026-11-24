@@ -1,8 +1,14 @@
+import os
+
+from dotenv import load_dotenv
+
 from bot.handoff import deve_passar_para_humano
 from bot.fluxo import carregar_dados, decidir_escolha, decidir_comercial
 
-dados = carregar_dados("dados/exemplo.json")
+load_dotenv()
+arquivo = os.getenv("ARQUIVO_DADOS", "dados/exemplo.json")
 
+dados = carregar_dados(arquivo)
 print(dados["mensagens"]["saudacao"])
 print(dados["mensagens"]["pedir_nome"])
 nome = input(">")
