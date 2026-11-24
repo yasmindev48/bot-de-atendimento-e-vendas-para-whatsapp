@@ -1,8 +1,4 @@
-import json
-
-def carregar_dados(caminho):
-    with open(caminho, encoding="utf-8") as f:
-        return json.load(f)
+from bot.fluxo import carregar_dados
 
 dados = carregar_dados("dados/exemplo.json")
 
