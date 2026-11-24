@@ -1,7 +1,10 @@
 import json
 
-with open("dados/exemplo.json", encoding="utf-8") as f:
-    dados = json.load(f)
+def carregar_dados(caminho):
+    with open(caminho, encoding="utf-8") as f:
+        return json.load(f)
+
+dados = carregar_dados("dados/exemplo.json")
 
 print(dados["mensagens"]["saudacao"])
 print(dados["mensagens"]["pedir_nome"])
