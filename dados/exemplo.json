@@ -27,5 +27,13 @@
       "1": { "nome": "Salão de beleza", "setor": "Consultor", "destino": "um dos nossos consultores" },
       "2": { "nome": "Comprando para mim", "setor": "Representante comercial", "destino": "o nosso representante comercial" }
     }
+  },
+
+  "palavras_chave": {
+    "1": ["pedido", "entrega", "chegou", "rastreio", "atrasado", "atraso"],
+    "2": ["boleto", "pagamento", "pagar", "pix", "segunda via", "nota fiscal", "fatura"],
+    "3": ["comprar", "compra", "preço", "preco", "catálogo", "catalogo", "revender", "orçamento"],
+    "4": ["parceria", "divulgação", "divulgar", "instagram", "influenciadora", "propaganda"],
+    "5": ["reclamação", "reclamar", "insatisfeita", "insatisfeito", "problema", "péssimo"]
   }
 }
