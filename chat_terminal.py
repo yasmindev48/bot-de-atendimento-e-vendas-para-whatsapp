@@ -3,7 +3,8 @@ import os
 from dotenv import load_dotenv
 
 from bot.handoff import deve_passar_para_humano
-from bot.fluxo import carregar_dados, decidir_escolha, decidir_comercial
+from bot.fluxo import carregar_dados, decidir_escolha, decidir_comercial, classificar_texto
+
 
 load_dotenv()
 arquivo = os.getenv("ARQUIVO_DADOS", "dados/exemplo.json")
@@ -23,6 +24,11 @@ tentativas = 0
 while True:
     escolha = input(">")
     acao, setor = decidir_escolha(escolha, dados)
+    if acao == "nao_entendi":
+        opcao = classificar_texto(escolha, dados)
+        if opcao is not None:
+            escolha = opcao
+            acao, setor = decidir_escolha(escolha, dados)
 
     if acao == "encerrar":
         print(dados["mensagens"]["despedida"].format(nome=nome))
