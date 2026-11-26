@@ -22,6 +22,7 @@ def decidir_comercial(resposta, dados):
         return "encaminhar", opcoes[resposta]["setor"]
     return "passar_para_humano", "Comercial"
 
+
 def classificar_texto(texto, dados):
     texto = texto.lower()
     for opcao, palavras in dados["palavras_chave"].items():
